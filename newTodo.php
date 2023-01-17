@@ -24,9 +24,10 @@ if($todoName){
 
     // $jsonFile = "todo.json";
 
-    file_put_contents("todo.json", json_encode($jsonArray)); 
+    file_put_contents("todo.json", json_encode($jsonArray, JSON_PRETTY_PRINT)); 
     // an associative array in json is converted into json using json_encode
     // this will in result save the todo into the json file
+    // THE JSON_PRETTY_PRINT will format the json code in the file in a nice way
 
 }
 ?>
