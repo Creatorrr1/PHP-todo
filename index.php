@@ -11,6 +11,7 @@ if (file_exists("todo.json")) {
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
     <title>Document</title>
 </head>
 <body>
@@ -20,10 +21,17 @@ if (file_exists("todo.json")) {
     <form/>
 
 <?php foreach ($todos as $todoName => $todo) { ?>
-    <div>
+    <div class="todo__spacing grid">
+    <form class="remove_block" action="complete_status.php" method="post">
+        <input type="hidden" name="todo_name" value="<?php echo $todoName ?>">
         <input type="checkbox" <?php echo $todo["completed"] ? "checked" : "" ?>>
+    </form>
         <?php echo $todoName ?>
-        <button>Delete</button>
+        <form class="remove_block" action="delete.php" method="post">
+            <input type="hidden" name="todo_name" value="<?php echo $todoName ?>">
+            <button>Delete</button>
+        </form>
+        <!-- <a href="delete.php?todo_name=<?php echo $todoName ?>">Delete</a> -->
     </div>
 <?php  } ?>
 
