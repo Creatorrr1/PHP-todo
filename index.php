@@ -35,5 +35,16 @@ if (file_exists("todo.json")) {
     </div>
 <?php  } ?>
 
+<script>
+    const checkboxes = document.querySelectorAll("input[type=checkbox");
+    checkboxes.forEach(checkbox => {
+        checkbox.onclick = function () {
+            this.parentNode.submit();
+            // 'this' also corresponds to the checkbox itself
+            // this will submit the form whenever the checkbox is checked
+        }
+    })
+</script>
+
 </body>
 </html>
