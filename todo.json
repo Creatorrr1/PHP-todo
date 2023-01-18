@@ -10,5 +10,8 @@
     },
     "todo2": {
         "completed": false
+    },
+    "todo3": {
+        "completed": false
     }
 }

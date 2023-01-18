@@ -9,10 +9,16 @@ $todoName = trim($todoName);
 
 if($todoName){
     // echo "save Todo";
-    $json = file_get_contents("todo.json");
-    $jsonArray = json_decode($json, true);
-    // will return an associative array
-    // an object in json is converted into an array using json_decode
+    if (file_exists("todo.json")) {
+        $json = file_get_contents("todo.json");
+        $jsonArray = json_decode($json, true);
+        // will return an associative array
+        // an object in json is converted into an array using json_decode
+    } else {
+        // if the json file doesn't exist then it will be created
+        // once file_put_contents is used to store
+        $jsonArray = [];
+    }
 
     $jsonArray[$todoName] = ["completed" => false];
     // this will insert the todoName into the associative array
@@ -30,4 +36,6 @@ if($todoName){
     // THE JSON_PRETTY_PRINT will format the json code in the file in a nice way
 
 }
+
+header("location: index.php");
 ?>
