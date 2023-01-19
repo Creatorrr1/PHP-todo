@@ -15,25 +15,25 @@ if (file_exists("todo.json")) {
     <title>Document</title>
 </head>
 <body>
-    <form action="newTodo.php" method="post" >
-    <input type="text" name="todo_name" placeholder="Enter your Todo">
-    <button>New Todo</button>
+    <form action="newTodo.php" method="post" class="add-todo-grid">
+        <input type="text" name="todo_name" placeholder="Enter your Todo" class="add-input">
+        <button class="add-button">New Todo</button>
     <form/>
 
-<?php foreach ($todos as $todoName => $todo) { ?>
-    <div class="todo__spacing grid">
-    <form class="remove_block" action="complete_status.php" method="post">
-        <input type="hidden" name="todo_name" value="<?php echo $todoName ?>">
-        <input type="checkbox" <?php echo $todo["completed"] ? "checked" : "" ?>>
-    </form>
+<?php foreach ($todos as $todoName => $todo) : ?>
+    <div class="todo__spacing todo-items-grid">
+        <form class="remove_block" action="complete_status.php" method="post">
+            <input type="hidden" name="todo_name" value="<?php echo $todoName ?>">
+            <input type="checkbox" <?php echo $todo["completed"] ? "checked" : "" ?>>
+        </form>
         <?php echo $todoName ?>
         <form class="remove_block" action="delete.php" method="post">
             <input type="hidden" name="todo_name" value="<?php echo $todoName ?>">
             <button>Delete</button>
         </form>
-        <!-- <a href="delete.php?todo_name=<?php echo $todoName ?>">Delete</a> -->
+        <!-- <a href="delete.php?todo_name=?php echo $todoName ?>">Delete</a> -->
     </div>
-<?php  } ?>
+<?php  endforeach ?>
 
 <script>
     const checkboxes = document.querySelectorAll("input[type=checkbox");

@@ -1,17 +1,11 @@
 {
     "todo item 1": {
-        "completed": true
+        "completed": false
     },
     "todo item 2": {
         "completed": true
     },
     "todo": {
-        "completed": false
-    },
-    "todo2": {
-        "completed": false
-    },
-    "todo3": {
         "completed": false
     }
 }

@@ -1,3 +1,17 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* body{
+    height: 35%;
+    min-height: 340px;
+    margin: auto;
+    top: 50px;
+    l
+} */
+
 .todo__spacing {
     margin-bottom: 20px;
 }
@@ -6,6 +20,24 @@
     display: inline-block;
 }
 
-.grid {
-
+.add-todo-grid {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
 }
+
+.add-input {
+    width: 250px;
+    margin-left: 50px;
+}
+
+.add-button {
+    width: 50px;
+    margin-right: 50px;
+}
+
+/* .todo-items-grid {
+    display: grid;
+    grid-template-columns: 1fr auto;
+} */
