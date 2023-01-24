@@ -37,5 +37,5 @@ if($todoName){
 
 }
 
-header("location: index.php");
+header("Location: index.php");
 ?>

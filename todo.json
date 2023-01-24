@@ -4,8 +4,5 @@
     },
     "todo item 2": {
         "completed": true
-    },
-    "todo": {
-        "completed": false
     }
 }
