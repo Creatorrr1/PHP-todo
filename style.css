@@ -1,8 +1,3 @@
-/* .todo-form {
-	margin-bottom: 32px;
-} */
-
-
 .todo-input {
 	padding: 14px 32px 14px 16px;
 	border-radius: 4px 0 0 4px;
@@ -14,6 +9,7 @@
 	color: #fff;
     margin-right: 0px;
 	margin-top: 20px;
+	margin-bottom: 20px;
 }
 
 .todo-button {
@@ -29,6 +25,7 @@
     padding-left: 16px;
     margin-left: 0px;
 	margin-top: 20px;
+	margin-bottom: 20px;
 	/* margin: 20px; */
 }
 
@@ -43,4 +40,26 @@
 	padding: 16px;
 	border-radius: 5px;
 	width: 90%;
+	margin-top: 20px;
+}
+
+.todo-styling {
+	color: white;
+}
+
+.icons {
+	display: flex;
+	align-items: center;
+	font-size: 24px;
+	cursor: pointer;
+}
+
+.delete-icon {
+	margin-right: 5px;
+	color: #fff;
+}
+
+.delete-button {
+	margin-right: 5px;
+	color: #fff;
 }

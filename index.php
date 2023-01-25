@@ -21,10 +21,7 @@ if (file_exists("todo.json")) {
     <div class="todo-app">
 
         <div>
-            <form action="newTodo.php" method="post" 
-            //class="add-todo-grid"
-            class="todo-form"
-            >
+            <form action="newTodo.php" method="post" class="todo-form">
                 <input type="text" name="todo_name" placeholder="Enter your Todo" class="add-input todo-input">
                 <button class="add-button todo-button">New Todo</button>
                 <form />
@@ -34,12 +31,12 @@ if (file_exists("todo.json")) {
             <div class="todo__spacing todo-items-grid todo-row">
                 <form class="remove_block" action="completeStatus.php" method="post">
                     <input type="hidden" name="todo_name" value="<?php echo $todoName ?>">
-                    <input type="checkbox" <?php echo $todo["completed"] ? "checked" : "" ?>>
+                    <input type="checkbox"class="todo-styling"<?php echo $todo["completed"] ? "checked" : "" ?>>
                 </form>
                 <?php echo $todoName ?>
-                <form class="remove_block" action="delete.php" method="post">
-                    <input type="hidden" name="todo_name" value="<?php echo $todoName ?>">
-                    <button>Delete</button>
+                <form class="remove_block icons" action="delete.php" method="post">
+                    <input type="hidden" name="todo_name" class="delete-icon" value="<?php echo $todoName ?>">
+                    <button class="delete-button">Delete</button>
                 </form>
                 <!-- <a href="delete.php?todo_name=?php echo $todoName ?>">Delete</a> -->
             </div>
