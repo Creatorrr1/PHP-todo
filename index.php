@@ -3,6 +3,10 @@ if (file_exists("todo.json")) {
     $json = file_get_contents("todo.json");
     $todos = json_decode($json, true);
 }
+// if (file_exists("todos.json")) {
+//     $json = file_get_contents("todos.json");
+//     $todos = json_decode($json, true);
+// }
 ?>
 
 <!DOCTYPE html>
@@ -24,7 +28,7 @@ if (file_exists("todo.json")) {
             <form action="newTodo.php" method="post" class="todo-form">
                 <input type="text" name="todo_name" placeholder="Enter your Todo" class="add-input todo-input">
                 <button class="add-button todo-button">New Todo</button>
-                <form />
+            <form />
         </div>
 
         <?php foreach ($todos as $todoName => $todo) : ?>
